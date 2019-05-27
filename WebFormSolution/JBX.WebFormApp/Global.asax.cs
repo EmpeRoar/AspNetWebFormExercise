@@ -1,12 +1,12 @@
-﻿using JBX.EF;
+﻿using JBX.Application.DummyQuery;
+using JBX.Reader;
+using JBX.WebFormApp.Data;
+using Microsoft.AspNet.WebFormsDependencyInjection.Unity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
-using System.Web.Security;
-using System.Web.SessionState;
+using Unity;
 
 namespace JBX.WebFormApp
 {
@@ -18,7 +18,10 @@ namespace JBX.WebFormApp
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-          
+            var container = this.AddUnity();
+
+            container.RegisterType<IDatax, Datax>();
+            //container.RegisterType<IDummyQuery, DummyQuery>();
         }
     }
 }
