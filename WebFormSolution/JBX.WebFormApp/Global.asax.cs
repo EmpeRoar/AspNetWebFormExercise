@@ -1,6 +1,5 @@
 ﻿using JBX.Application.DummyQuery;
 using JBX.Reader;
-using JBX.WebFormApp.Data;
 using Microsoft.AspNet.WebFormsDependencyInjection.Unity;
 using System;
 using System.Web;

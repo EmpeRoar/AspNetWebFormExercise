@@ -11,6 +11,7 @@ namespace JBX.EF
     {
         public ProductContext() : base("AspNetWebFormsExercise")
         {
+            this.Database.Connection.ConnectionString = "Data Source=LAP0148;Initial Catalog=AspNetWebFormsCnx;Integrated Security=True";
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
