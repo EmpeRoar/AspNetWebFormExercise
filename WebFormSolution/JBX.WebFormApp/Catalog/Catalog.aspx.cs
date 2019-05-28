@@ -1,4 +1,5 @@
 ﻿using JBX.Application.DummyQuery;
+using JBX.Reader;
 using JBX.WebFormApp.Data;
 using System;
 using System.Collections.Generic;
@@ -11,14 +12,14 @@ namespace JBX.WebFormApp.Catalog
 {
     public partial class Catalog : System.Web.UI.Page
     {
-        IDatax _dummyQuery;
-        public Catalog(IDatax dummyQuery)
+        IDummyQuery _dummyQuery;
+        public Catalog(IDummyQuery dummyQuery)
         {
             _dummyQuery = dummyQuery;
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-           var planets = _dummyQuery.GetData();
+           var planets = _dummyQuery.GetPlanets();
            var xxx = "";
         }
     }

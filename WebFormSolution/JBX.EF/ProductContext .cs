@@ -9,7 +9,7 @@ namespace JBX.EF
 {
     public class ProductContext : DbContext
     {
-        public ProductContext() : base("WingtipToys")
+        public ProductContext() : base("AspNetWebFormsExercise")
         {
         }
         public DbSet<Category> Categories { get; set; }

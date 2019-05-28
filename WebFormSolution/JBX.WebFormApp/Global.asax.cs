@@ -20,8 +20,8 @@ namespace JBX.WebFormApp
 
             var container = this.AddUnity();
 
-            container.RegisterType<IDatax, Datax>();
-            //container.RegisterType<IDummyQuery, DummyQuery>();
+            container.RegisterType<IDummyQuery, DummyQuery>();
+            container.RegisterType<IDummyData, DummyData>();
         }
     }
 }
